@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
 }
@@ -20,4 +20,108 @@
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+} */
+
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #d0e8ff, #f7faff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Main App Wrapper */
+#todo-app-wrapper {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 35px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#todo-app-wrapper:hover {
+  transform: scale(1.01);
+}
+
+/* Form Section */
+#todo-app-input {
+  margin-bottom: 30px;
+}
+
+#todo-form {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 18px;
+  border: 2px solid #cfd8dc;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#todo-input:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 0 4px rgba(0, 119, 204, 0.1);
+  outline: none;
+}
+
+/* Submit Button */
+#todo-button {
+  padding: 15px 24px;
+  font-size: 18px;
+  background-color: #0077cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#todo-button:hover {
+  background-color: #005fa3;
+  transform: translateY(-1px);
+}
+
+/* Todo List Styling */
+#todo-app-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+#todo-app-list-ul {
+  list-style: none;
+}
+
+#todo-app-list-ul li {
+  background: #f5f9fc;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.2s ease;
+}
+
+#todo-app-list-ul li:hover {
+  background-color: #e9f3fc;
 }
